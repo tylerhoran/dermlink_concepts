@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dermlink Design Concepts</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg: #09090b;
+                --surface: #18181b;
+                --border: #27272a;
+                --text: #fafafa;
+                --text-muted: #a1a1aa;
+                --accent-1: #14b8a6;
+                --accent-2: #00ff88;
+                --accent-3: #0066ff;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family:
+                    "IBM Plex Sans",
+                    -apple-system,
+                    sans-serif;
+                font-size: 15px;
+                line-height: 1.6;
+                color: var(--text);
+                background: var(--bg);
+                min-height: 100vh;
+                padding: 3rem 1.5rem;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            header {
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .badge {
+                display: inline-block;
+                padding: 0.25rem 0.625rem;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.75rem;
+                color: var(--text-muted);
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+                margin-bottom: 0.75rem;
+            }
+
+            header p {
+                color: var(--text-muted);
+                max-width: 560px;
+            }
+
+            .concepts {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .concept {
+                display: grid;
+                grid-template-columns: 1fr 1.4fr;
+                gap: 1.5rem;
+                padding: 1.5rem;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                transition: border-color 0.2s;
+            }
+
+            .concept:hover {
+                border-color: #3f3f46;
+            }
+
+            .concept-preview {
+                aspect-ratio: 4/3;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .concept-preview img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .preview-placeholder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.75rem;
+                color: var(--text-muted);
+            }
+
+            .concept-1 .preview-placeholder {
+                background: linear-gradient(
+                    135deg,
+                    #1a4a4a 0%,
+                    #0f3535 50%,
+                    #e8b4a0 100%
+                );
+            }
+
+            .concept-2 .preview-placeholder {
+                background: linear-gradient(
+                    135deg,
+                    #0a0a0a 0%,
+                    #141414 50%,
+                    #00ff88 100%
+                );
+            }
+
+            .concept-3 .preview-placeholder {
+                background: linear-gradient(
+                    135deg,
+                    #f8f9fa 0%,
+                    #ffffff 50%,
+                    #0066ff 100%
+                );
+                color: #3c4043;
+            }
+
+            .concept-info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .concept-header {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 1rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .concept-num {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.6875rem;
+                color: var(--text-muted);
+                margin-bottom: 0.25rem;
+            }
+
+            .concept h2 {
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+
+            .concept-tag {
+                flex-shrink: 0;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.6875rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .concept-1 .concept-tag {
+                background: rgba(20, 184, 166, 0.15);
+                color: var(--accent-1);
+            }
+
+            .concept-2 .concept-tag {
+                background: rgba(0, 255, 136, 0.1);
+                color: var(--accent-2);
+            }
+
+            .concept-3 .concept-tag {
+                background: rgba(0, 102, 255, 0.15);
+                color: var(--accent-3);
+            }
+
+            .concept-desc {
+                color: var(--text-muted);
+                font-size: 0.875rem;
+                margin-bottom: 1rem;
+                flex: 1;
+            }
+
+            .concept-details {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .detail {
+                padding: 0.25rem 0.5rem;
+                background: var(--bg);
+                border-radius: 4px;
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.6875rem;
+                color: var(--text-muted);
+            }
+
+            .concept-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.625rem 1rem;
+                background: transparent;
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                color: var(--text);
+                font-size: 0.8125rem;
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.15s;
+                align-self: flex-start;
+            }
+
+            .concept-link:hover {
+                background: var(--bg);
+                border-color: var(--text-muted);
+            }
+
+            .concept-link svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            footer {
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid var(--border);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: var(--text-muted);
+                font-size: 0.8125rem;
+            }
+
+            footer a {
+                color: var(--text);
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 700px) {
+                body {
+                    padding: 2rem 1rem;
+                }
+
+                .concept {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+
+                .concept-preview {
+                    aspect-ratio: 16/9;
+                }
+
+                footer {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="badge">Design Exploration</div>
+                <h1>Dermlink Landing Page Concepts</h1>
+                <p>
+                    Three distinct design directions for Dermlink, an
+                    asynchronous telemedicine platform connecting patients with
+                    dermatologists. Each concept explores a different aesthetic
+                    approach while maintaining the core value proposition.
+                </p>
+            </header>
+
+            <div class="concepts">
+                <article class="concept concept-1">
+                    <div class="concept-preview">
+                        <div class="preview-placeholder">Clinical Serenity</div>
+                    </div>
+                    <div class="concept-info">
+                        <div class="concept-header">
+                            <div>
+                                <div class="concept-num">01</div>
+                                <h2>Clinical Serenity</h2>
+                            </div>
+                            <span class="concept-tag">Warm</span>
+                        </div>
+                        <p class="concept-desc">
+                            Soft, organic gradients with warm terracotta and
+                            peach tones paired with deep teal accents.
+                            Typography-forward with Instrument Serif headlines.
+                            Evokes trust and approachability while maintaining
+                            medical professionalism.
+                        </p>
+                        <div class="concept-details">
+                            <span class="detail"
+                                >Instrument Serif + DM Sans</span
+                            >
+                            <span class="detail">Peach / Teal</span>
+                            <span class="detail">Light Theme</span>
+                            <span class="detail">Organic Shapes</span>
+                        </div>
+                        <a href="concept-1/" class="concept-link">
+                            View Concept
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="concept concept-2">
+                    <div class="concept-preview">
+                        <div class="preview-placeholder">Noir Editorial</div>
+                    </div>
+                    <div class="concept-info">
+                        <div class="concept-header">
+                            <div>
+                                <div class="concept-num">02</div>
+                                <h2>Noir Editorial</h2>
+                            </div>
+                            <span class="concept-tag">Dark</span>
+                        </div>
+                        <p class="concept-desc">
+                            Dark, sophisticated magazine aesthetic with
+                            near-black backgrounds and electric green accents.
+                            Film grain texture overlay with sharp 1px borders.
+                            Premium, exclusive feel suited for a high-end
+                            healthcare experience.
+                        </p>
+                        <div class="concept-details">
+                            <span class="detail"
+                                >Playfair Display + Outfit</span
+                            >
+                            <span class="detail">Black / Electric Green</span>
+                            <span class="detail">Dark Theme</span>
+                            <span class="detail">Editorial Grid</span>
+                        </div>
+                        <a href="concept-2/" class="concept-link">
+                            View Concept
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="concept concept-3">
+                    <div class="concept-preview">
+                        <div class="preview-placeholder">Neo Clinical</div>
+                    </div>
+                    <div class="concept-info">
+                        <div class="concept-header">
+                            <div>
+                                <div class="concept-num">03</div>
+                                <h2>Neo Clinical</h2>
+                            </div>
+                            <span class="concept-tag">Modern</span>
+                        </div>
+                        <p class="concept-desc">
+                            Swiss modernist approach with bold geometric
+                            typography and vibrant blue accents on clean white.
+                            Subtle grid background pattern with confident,
+                            tech-forward energy. Modern healthcare meets Silicon
+                            Valley.
+                        </p>
+                        <div class="concept-details">
+                            <span class="detail">Syne + IBM Plex Sans</span>
+                            <span class="detail">White / Vibrant Blue</span>
+                            <span class="detail">Light Theme</span>
+                            <span class="detail">Geometric Shapes</span>
+                        </div>
+                        <a href="concept-3/" class="concept-link">
+                            View Concept
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <footer>
+                <p>Dermlink Design Concepts</p>
+            </footer>
+        </div>
+    </body>
+</html>
