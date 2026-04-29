@@ -3,38 +3,78 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dermlink Specialist Network — Dermatology eConsults for Concierge Medicine</title>
+        <title>Dermlink Specialist Network — Atelier</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <!-- Decorative side rulers — calibration ticks framing the page -->
+        <aside class="page-ruler page-ruler-left" aria-hidden="true">
+            <div class="ruler-cap">
+                <span>DERMLINK</span>
+                <span>·</span>
+                <span>ATELIER</span>
+            </div>
+            <div class="ruler-ticks"></div>
+            <div class="ruler-foot">
+                <span>MMXXVI</span>
+            </div>
+        </aside>
+        <aside class="page-ruler page-ruler-right" aria-hidden="true">
+            <div class="ruler-cap">
+                <span>SPÉCIALISTES</span>
+                <span>·</span>
+                <span>DOSSIER&nbsp;0427</span>
+            </div>
+            <div class="ruler-ticks"></div>
+            <div class="ruler-foot">
+                <span>MEDIAN&nbsp;T+&nbsp;19H</span>
+            </div>
+        </aside>
+
         <nav class="nav">
             <div class="nav-inner">
                 <a href="#" class="logo">
                     <span class="logo-mark" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8" />
-                            <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.6" />
-                            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.6" />
+                            <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="0.4" opacity="0.5" />
+                            <!-- 12 hour ticks like a watchface -->
+                            <g stroke="currentColor" stroke-width="0.6">
+                                <line x1="16" y1="1" x2="16" y2="3.5" />
+                                <line x1="24" y1="3.05" x2="22.75" y2="5.21" />
+                                <line x1="29" y1="8" x2="26.84" y2="9.25" />
+                                <line x1="31" y1="16" x2="28.5" y2="16" />
+                                <line x1="29" y1="24" x2="26.84" y2="22.75" />
+                                <line x1="24" y1="28.95" x2="22.75" y2="26.79" />
+                                <line x1="16" y1="31" x2="16" y2="28.5" />
+                                <line x1="8" y1="28.95" x2="9.25" y2="26.79" />
+                                <line x1="3" y1="24" x2="5.16" y2="22.75" />
+                                <line x1="1" y1="16" x2="3.5" y2="16" />
+                                <line x1="3" y1="8" x2="5.16" y2="9.25" />
+                                <line x1="8" y1="3.05" x2="9.25" y2="5.21" />
+                            </g>
+                            <circle cx="16" cy="16" r="2" fill="currentColor" />
                         </svg>
                     </span>
                     <span class="logo-text">
                         <span class="logo-derm">Derm</span><span class="logo-link">link</span>
                     </span>
                     <span class="logo-divider"></span>
-                    <span class="logo-sub">Specialist Network</span>
+                    <span class="logo-sub">Atelier&nbsp;·&nbsp;Spécialistes</span>
                 </a>
                 <div class="nav-center">
                     <a href="#how">Method</a>
-                    <a href="#network">Network</a>
+                    <a href="#network">Cabinet</a>
                     <a href="#pricing">Membership</a>
                 </div>
                 <div class="nav-end">
+                    <span class="nav-ref">Dossier&nbsp;0427</span>
                     <a href="#" class="nav-link">Sign in</a>
                     <a href="#request" class="btn-line">
                         <span>Request access</span>
@@ -45,28 +85,32 @@
         </nav>
 
         <main>
+            <!-- ================================================== -->
+            <!-- HERO — watchface composition                       -->
+            <!-- ================================================== -->
             <header class="hero">
                 <div class="hero-inner">
-                    <div class="hero-eyebrow">
-                        <span class="eyebrow-mark"></span>
-                        <span>Specialist Network · Dermatology</span>
-                        <span class="eyebrow-mark"></span>
-                    </div>
-
-                    <h1 class="hero-headline">
-                        A specialist consult,
-                        <em>when your patient needs one.</em>
-                    </h1>
-
                     <div class="hero-grid">
-                        <div class="hero-deck-col">
+                        <div class="hero-text">
+                            <div class="hero-eyebrow">
+                                <span class="eyebrow-cal">N°&nbsp;0427</span>
+                                <span class="eyebrow-rule"></span>
+                                <span>Specialist Network · Dermatology</span>
+                            </div>
+
+                            <h1 class="hero-headline">
+                                A specialist consult,
+                                <em>when your patient needs one.</em>
+                            </h1>
+
                             <p class="hero-deck">
                                 Board-certified dermatology guidance for concierge
-                                medicine. Submit a case in under five minutes. Receive a
-                                structured assessment within twenty-four hours. No
-                                referral, no waiting room — peer-to-peer advisory
-                                between physicians.
+                                medicine. Submit a case in under five minutes.
+                                Receive a structured assessment within
+                                twenty-four hours. No referral, no waiting room
+                                — peer-to-peer advisory between physicians.
                             </p>
+
                             <div class="hero-actions">
                                 <a href="#request" class="btn-solid">
                                     <span>Request access</span>
@@ -76,387 +120,545 @@
                                     <span class="btn-arrow">↓</span>
                                 </a>
                             </div>
+
+                            <!-- Three-stat strip — horizontal, hairline-divided -->
+                            <dl class="hero-stats">
+                                <div class="hero-stat">
+                                    <dt>250</dt>
+                                    <dd>Reviewers, on&nbsp;call</dd>
+                                </div>
+                                <span class="hero-stat-rule" aria-hidden="true"></span>
+                                <div class="hero-stat">
+                                    <dt>5</dt>
+                                    <dd>Subspecialties covered</dd>
+                                </div>
+                                <span class="hero-stat-rule" aria-hidden="true"></span>
+                                <div class="hero-stat">
+                                    <dt>24h</dt>
+                                    <dd>Guaranteed turnaround</dd>
+                                </div>
+                            </dl>
                         </div>
 
-                        <aside class="hero-aside" aria-label="Sample eConsult preview">
-                            <div class="aside-card">
-                                <div class="aside-meta">
-                                    <span class="aside-label">eConsult № 0427</span>
-                                    <span class="aside-time">Returned · 19h 12m</span>
-                                </div>
-                                <div class="aside-stamp">
-                                    <span>Confidential</span>
-                                </div>
-                                <h3 class="aside-headline">
-                                    Provisional <em>diagnosis</em>
-                                </h3>
-                                <p class="aside-body">
-                                    Findings consistent with subacute cutaneous lupus
-                                    erythematosus. Recommend ANA, dsDNA, anti-Ro/SSA prior
-                                    to systemic therapy.
+                        <!-- Case-flow mockup: Submitted → elapsed → Returned -->
+                        <aside class="hero-flow" aria-label="Sample case flow">
+                            <article class="case-card case-submitted">
+                                <header class="case-meta">
+                                    <span class="case-stage">Submitted</span>
+                                    <span class="case-stamp">Dossier № 0427</span>
+                                </header>
+                                <h3 class="case-title">38F · annular eruption, persistent.</h3>
+                                <p class="case-q">
+                                    Atypical pattern across upper back, six-week
+                                    course. Photoprotection ineffective. Considering
+                                    biopsy — would value a derm opinion before
+                                    proceeding.
                                 </p>
-                                <div class="aside-rule"></div>
-                                <dl class="aside-meta-grid">
+                                <div class="case-photos" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <footer class="case-foot">
+                                    <span class="foot-label">From</span>
+                                    <span class="foot-value">M. Tate, MD · Boston</span>
+                                </footer>
+                            </article>
+
+                            <div class="case-bridge" aria-hidden="true">
+                                <span class="bridge-line"></span>
+                                <span class="bridge-pill">
+                                    <span class="bridge-tag">Elapsed</span>
+                                    <span class="bridge-time">19h&nbsp;12m</span>
+                                </span>
+                                <span class="bridge-line"></span>
+                            </div>
+
+                            <article class="case-card case-returned">
+                                <header class="case-meta">
+                                    <span class="case-stage case-stage-done">Returned</span>
+                                    <span class="case-stamp">Confidential</span>
+                                </header>
+                                <h3 class="case-title">
+                                    Provisional <em>SCLE</em>, annular variant.
+                                </h3>
+                                <p class="case-summary">
+                                    Recommend ANA, anti-Ro/SSA before systemic therapy.
+                                    Begin photoprotection and topical clobetasol.
+                                </p>
+                                <dl class="case-action">
+                                    <div>
+                                        <dt>In-person referral</dt>
+                                        <dd>Not required</dd>
+                                    </div>
                                     <div>
                                         <dt>Reviewer</dt>
                                         <dd>S. Chen, MD · FAAD</dd>
                                     </div>
-                                    <div>
-                                        <dt>Subspecialty</dt>
-                                        <dd>Medical Derm</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Confidence</dt>
-                                        <dd>High</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Follow-up</dt>
-                                        <dd>2 weeks</dd>
-                                    </div>
                                 </dl>
-                            </div>
-                            <svg class="aside-mark" viewBox="0 0 120 120" aria-hidden="true">
-                                <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="0.5" />
-                                <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="0.4" />
-                                <text x="60" y="22" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="9" fill="currentColor">Dermlink</text>
-                                <text x="60" y="106" text-anchor="middle" font-family="IBM Plex Sans" font-size="6" letter-spacing="2" fill="currentColor">EST · MMXXIV</text>
-                                <line x1="20" y1="60" x2="38" y2="60" stroke="currentColor" stroke-width="0.4" />
-                                <line x1="82" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="0.4" />
-                                <text x="60" y="64" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="currentColor">D</text>
-                            </svg>
+                            </article>
                         </aside>
                     </div>
 
                     <div class="hero-trust">
+                        <span class="trust-rule"></span>
                         <span>Board-Certified</span>
-                        <span class="trust-dot">·</span>
+                        <span class="trust-mark">◇</span>
                         <span>HIPAA Compliant</span>
-                        <span class="trust-dot">·</span>
+                        <span class="trust-mark">◇</span>
                         <span>Physician-Led</span>
-                        <span class="trust-dot">·</span>
+                        <span class="trust-mark">◇</span>
                         <span>MOC Compliant</span>
+                        <span class="trust-rule"></span>
                     </div>
                 </div>
             </header>
 
+            <!-- ================================================== -->
+            <!-- WHY — spec sheet rows with dot leaders             -->
+            <!-- ================================================== -->
             <section class="why">
                 <div class="why-inner">
                     <header class="section-head">
-                        <span class="section-num">I.</span>
+                        <div class="section-prefix">
+                            <span class="section-roman">I</span>
+                            <span class="section-rule"></span>
+                            <span class="section-class">SPECIFICATIONS</span>
+                        </div>
                         <h2 class="section-title">
                             What an eConsult <em>changes.</em>
                         </h2>
                         <p class="section-deck">
-                            For most concerns, your patient does not need a dermatologist
-                            in the room — they need a dermatologist's judgment. The
-                            specialist network closes that gap in hours, not weeks.
+                            For most concerns, your patient does not need a
+                            dermatologist in the room — they need a
+                            dermatologist's judgment. The specialist network
+                            closes that gap in hours, not weeks.
                         </p>
                     </header>
 
-                    <ol class="why-list">
-                        <li class="why-item">
-                            <span class="why-num">01</span>
-                            <div class="why-body">
-                                <h3>
-                                    Avoid <em>seventy percent</em> of specialist referrals.
-                                </h3>
-                                <p>
+                    <!-- Specifications table — dot leaders -->
+                    <table class="spec-sheet">
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <span class="spec-num">001</span>
+                                    <span class="spec-label">Specialist referrals avoided</span>
+                                </th>
+                                <td class="spec-leader" aria-hidden="true"></td>
+                                <td class="spec-value">
+                                    <span class="value-figure">70%</span>
+                                </td>
+                                <td class="spec-note">
                                     Most rashes, lesions, and chronic skin presentations
                                     can be managed at the primary level once a specialist
                                     has weighed in. eConsults convert referrals into
                                     confidence — and back into your visits.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <span class="why-num">02</span>
-                            <div class="why-body">
-                                <h3>
-                                    Save the patient <em>weeks</em> of waiting.
-                                </h3>
-                                <p>
-                                    Median time-to-dermatologist in most regions is six to
-                                    twelve weeks. The network responds in under twenty-four
-                                    hours, with treatment recommendations you can act on the
-                                    same day.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <span class="why-num">03</span>
-                            <div class="why-body">
-                                <h3>
-                                    Keep the <em>primary relationship</em> intact.
-                                </h3>
-                                <p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="spec-num">002</span>
+                                    <span class="spec-label">Time saved per case</span>
+                                </th>
+                                <td class="spec-leader" aria-hidden="true"></td>
+                                <td class="spec-value">
+                                    <span class="value-figure">6&ndash;12<span class="value-unit">wk</span></span>
+                                </td>
+                                <td class="spec-note">
+                                    Median time-to-dermatologist in most regions is six
+                                    to twelve weeks. The network responds in under
+                                    twenty-four hours, with treatment recommendations you
+                                    can act on the same day.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="spec-num">003</span>
+                                    <span class="spec-label">Primary relationship retained</span>
+                                </th>
+                                <td class="spec-leader" aria-hidden="true"></td>
+                                <td class="spec-value">
+                                    <span class="value-figure">100%</span>
+                                </td>
+                                <td class="spec-note">
                                     The specialist advises; you remain the treating
-                                    physician. Continuity stays with your practice — and so
-                                    does the patient.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="why-item">
-                            <span class="why-num">04</span>
-                            <div class="why-body">
-                                <h3>
-                                    Raise the floor on <em>difficult cases.</em>
-                                </h3>
-                                <p>
+                                    physician. Continuity stays with your practice — and
+                                    so does the patient.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <span class="spec-num">004</span>
+                                    <span class="spec-label">Difficult-case escalation</span>
+                                </th>
+                                <td class="spec-leader" aria-hidden="true"></td>
+                                <td class="spec-value">
+                                    <span class="value-figure">&infin;</span>
+                                </td>
+                                <td class="spec-note">
                                     The diagnoses you'd refer reflexively — atypical
-                                    rashes, pigmented lesions, recalcitrant disease — get a
-                                    second set of trained eyes before treatment begins.
-                                </p>
-                            </div>
-                        </li>
-                    </ol>
+                                    rashes, pigmented lesions, recalcitrant disease — get
+                                    a second set of trained eyes before treatment begins.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- HOW — chronograph timeline ruler                   -->
+            <!-- ================================================== -->
             <section id="how" class="how">
                 <div class="how-inner">
                     <header class="section-head section-head-light">
-                        <span class="section-num">II.</span>
+                        <div class="section-prefix">
+                            <span class="section-roman">II</span>
+                            <span class="section-rule"></span>
+                            <span class="section-class">METHOD</span>
+                        </div>
                         <h2 class="section-title">
-                            The <em>method.</em>
+                            Three <em>movements.</em>
                         </h2>
                         <p class="section-deck">
-                            Three movements. Designed by physicians, for physicians.
+                            From submission to assessment in under a day. Designed
+                            by physicians, for physicians.
                         </p>
                     </header>
 
-                    <div class="how-steps">
-                        <article class="how-step">
-                            <div class="step-prefix">
-                                <span class="step-num">Step 01</span>
-                                <span class="step-time">~ 5 minutes</span>
-                            </div>
+                    <ol class="method-steps">
+                        <li class="method-step">
+                            <header class="step-prefix">
+                                <span class="step-num">I</span>
+                                <span class="step-rule"></span>
+                                <span class="step-time">Submission</span>
+                            </header>
                             <h3>Submit the case.</h3>
                             <p>
-                                Photos, relevant history, the question at hand. The intake
-                                is structured by board-certified dermatologists so nothing
-                                essential is missed.
+                                Photos, relevant history, the question at hand. The
+                                intake is structured by board-certified dermatologists
+                                so nothing essential is missed.
                             </p>
                             <ul class="step-detail">
                                 <li>Three photographs · clinical, mid-range, dermoscopy</li>
                                 <li>Past treatment, comorbidities, current medications</li>
                                 <li>The specific clinical question you need answered</li>
                             </ul>
-                        </article>
+                        </li>
 
-                        <span class="how-rule" aria-hidden="true"></span>
-
-                        <article class="how-step">
-                            <div class="step-prefix">
-                                <span class="step-num">Step 02</span>
-                                <span class="step-time">Median 19 hours</span>
-                            </div>
+                        <li class="method-step">
+                            <header class="step-prefix">
+                                <span class="step-num">II</span>
+                                <span class="step-rule"></span>
+                                <span class="step-time">Review</span>
+                            </header>
                             <h3>A dermatologist reviews.</h3>
                             <p>
-                                Cases route to the right subspecialist — medical, surgical,
-                                pediatric, or dermatopathology — based on the question.
-                                Every reviewer is board-certified and MOC-compliant.
+                                Cases route to the right subspecialist — medical,
+                                surgical, pediatric, or dermatopathology — based on
+                                the question. Every reviewer is board-certified and
+                                MOC-compliant.
                             </p>
                             <ul class="step-detail">
                                 <li>Routing by subspecialty and clinical question</li>
                                 <li>One physician, accountable end-to-end</li>
                                 <li>Audit trail preserved for the chart</li>
                             </ul>
-                        </article>
+                        </li>
 
-                        <span class="how-rule" aria-hidden="true"></span>
-
-                        <article class="how-step">
-                            <div class="step-prefix">
-                                <span class="step-num">Step 03</span>
-                                <span class="step-time">Within 24 hours</span>
-                            </div>
+                        <li class="method-step">
+                            <header class="step-prefix">
+                                <span class="step-num">III</span>
+                                <span class="step-rule"></span>
+                                <span class="step-time">Assessment</span>
+                            </header>
                             <h3>Receive a structured assessment.</h3>
                             <p>
-                                Provisional diagnosis, recommended workup, treatment plan,
-                                and a clear answer to whether in-person referral is
-                                warranted. Written in language for the chart.
+                                Provisional diagnosis, recommended workup, treatment
+                                plan, and a clear answer to whether in-person referral
+                                is warranted. Written in language for the chart.
                             </p>
                             <ul class="step-detail">
                                 <li>Provisional diagnosis · differential</li>
                                 <li>Treatment recommendations · medication, dose, duration</li>
                                 <li>Refer-or-not guidance with rationale</li>
                             </ul>
-                        </article>
+                        </li>
+                    </ol>
+
+                    <!-- Subtle metric strip beneath the method -->
+                    <div class="method-metric">
+                        <span class="metric-rule"></span>
+                        <span class="metric-text">
+                            <span class="metric-figure">19h</span>
+                            <span class="metric-label">median turnaround across the network</span>
+                        </span>
+                        <span class="metric-rule"></span>
                     </div>
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- RECEIVE — calibration certificate                  -->
+            <!-- ================================================== -->
             <section class="receive">
                 <div class="receive-inner">
                     <header class="section-head">
-                        <span class="section-num">III.</span>
+                        <div class="section-prefix">
+                            <span class="section-roman">III</span>
+                            <span class="section-rule"></span>
+                            <span class="section-class">DOSSIER</span>
+                        </div>
                         <h2 class="section-title">
                             What you <em>receive.</em>
                         </h2>
                         <p class="section-deck">
-                            Every assessment follows the same structured format, written
-                            for the chart and easy to act on. A representative example
-                            below.
+                            Every assessment follows the same structured format,
+                            issued as a signed dossier for your chart. Below: a
+                            representative example.
                         </p>
                     </header>
 
-                    <article class="report">
-                        <header class="report-head">
-                            <div class="report-meta">
-                                <span class="report-id">eConsult № 0427</span>
-                                <span class="report-date">Returned 19h 12m after submission</span>
+                    <article class="cert">
+                        <!-- Certificate header — engraved title -->
+                        <header class="cert-head">
+                            <div class="cert-titlemark">
+                                <svg viewBox="0 0 60 60" class="cert-seal" aria-hidden="true">
+                                    <circle cx="30" cy="30" r="29" fill="none" stroke="currentColor" stroke-width="0.5" />
+                                    <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.6" />
+                                    <text x="30" y="36" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="22" fill="currentColor">D</text>
+                                    <line x1="6" y1="30" x2="14" y2="30" stroke="currentColor" stroke-width="0.4" />
+                                    <line x1="46" y1="30" x2="54" y2="30" stroke="currentColor" stroke-width="0.4" />
+                                </svg>
+                                <div>
+                                    <span class="cert-class">Dermatological Assessment</span>
+                                    <h3 class="cert-title">Dossier <em>d'évaluation</em></h3>
+                                </div>
                             </div>
-                            <div class="report-stamp">Confidential · For physician use</div>
+                            <dl class="cert-stamps">
+                                <div>
+                                    <dt>Dossier</dt>
+                                    <dd>№&nbsp;0427</dd>
+                                </div>
+                                <div>
+                                    <dt>Returned</dt>
+                                    <dd>19h&nbsp;12m</dd>
+                                </div>
+                                <div>
+                                    <dt>Reviewer</dt>
+                                    <dd>S. Chen, MD</dd>
+                                </div>
+                            </dl>
                         </header>
 
-                        <div class="report-grid">
-                            <section class="report-block">
-                                <h4>Provisional diagnosis</h4>
-                                <p class="report-lead">
+                        <div class="cert-rule"></div>
+
+                        <!-- Spec rows in the certificate body -->
+                        <div class="cert-body">
+                            <section class="cert-block">
+                                <header>
+                                    <span class="block-num">A</span>
+                                    <h4>Provisional diagnosis</h4>
+                                </header>
+                                <p class="cert-lead">
                                     Subacute cutaneous lupus erythematosus (SCLE),
                                     annular variant.
                                 </p>
-                                <dl class="report-attrs">
+                                <dl class="cert-spec">
                                     <div>
                                         <dt>Differential</dt>
                                         <dd>Tinea corporis, granuloma annulare, erythema annulare centrifugum</dd>
                                     </div>
                                     <div>
                                         <dt>Confidence</dt>
-                                        <dd>High — pending serology</dd>
+                                        <dd>High <span class="cert-bar"><span style="width:88%"></span></span></dd>
                                     </div>
                                 </dl>
                             </section>
 
-                            <section class="report-block">
-                                <h4>Recommended workup</h4>
-                                <ul class="report-list">
+                            <section class="cert-block">
+                                <header>
+                                    <span class="block-num">B</span>
+                                    <h4>Recommended workup</h4>
+                                </header>
+                                <ol class="cert-list">
                                     <li>ANA with reflex titer and pattern</li>
                                     <li>Anti-Ro/SSA, anti-La/SSB</li>
                                     <li>CBC with differential, complete metabolic panel</li>
                                     <li>Consider 4mm punch biopsy if serology equivocal</li>
-                                </ul>
+                                </ol>
                             </section>
 
-                            <section class="report-block">
-                                <h4>Treatment plan</h4>
-                                <p class="report-lead">First-line, primary care managed.</p>
-                                <ul class="report-list">
+                            <section class="cert-block">
+                                <header>
+                                    <span class="block-num">C</span>
+                                    <h4>Treatment plan</h4>
+                                </header>
+                                <p class="cert-lead">
+                                    First-line, primary care managed.
+                                </p>
+                                <ol class="cert-list">
                                     <li>Strict photoprotection · SPF 50+ daily, UPF clothing</li>
                                     <li>Triamcinolone 0.1% ointment BID to active lesions, 2 weeks</li>
                                     <li>Hydroxychloroquine 200mg BID with ophthalmologic baseline if persistent at 4 weeks</li>
-                                </ul>
+                                </ol>
                             </section>
 
-                            <section class="report-block">
-                                <h4>Referral guidance</h4>
-                                <p class="report-lead">
-                                    In-person dermatology referral <em>not required</em>
-                                    at this time.
+                            <section class="cert-block">
+                                <header>
+                                    <span class="block-num">D</span>
+                                    <h4>Referral guidance</h4>
+                                </header>
+                                <p class="cert-lead">
+                                    In-person dermatology referral
+                                    <em>not required</em> at this time.
                                 </p>
-                                <p class="report-detail">
-                                    Re-consult or refer if no improvement at 6 weeks, new
-                                    systemic symptoms, or biopsy considered. Rheumatology
-                                    referral if serology positive.
+                                <p class="cert-detail">
+                                    Re-consult or refer if no improvement at 6 weeks,
+                                    new systemic symptoms, or biopsy considered.
+                                    Rheumatology referral if serology positive.
                                 </p>
                             </section>
                         </div>
 
-                        <footer class="report-foot">
-                            <div class="report-sig">
+                        <!-- Engraved signature footer -->
+                        <footer class="cert-foot">
+                            <div class="cert-engrave">
+                                <span class="engrave-line">Signed in Boston, MA · Dossier 0427</span>
+                                <span class="engrave-line">Issued by the Dermlink Specialist Cabinet</span>
+                            </div>
+                            <div class="cert-sig">
+                                <svg class="sig-flourish" viewBox="0 0 120 32" aria-hidden="true">
+                                    <path d="M2 22 Q 30 4, 60 18 T 118 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+                                </svg>
                                 <span class="sig-name">Sarah Chen, MD</span>
                                 <span class="sig-cred">Board-Certified · Medical Dermatology</span>
                                 <span class="sig-cred">Stanford School of Medicine, FAAD</span>
-                            </div>
-                            <div class="report-mark">
-                                <svg viewBox="0 0 40 40" aria-hidden="true">
-                                    <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="0.5" />
-                                    <text x="20" y="24" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="currentColor">D</text>
-                                </svg>
                             </div>
                         </footer>
                     </article>
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- NETWORK — orbital cabinet diagram + spec rows      -->
+            <!-- ================================================== -->
             <section id="network" class="network">
                 <div class="network-inner">
                     <header class="section-head">
-                        <span class="section-num">IV.</span>
+                        <div class="section-prefix">
+                            <span class="section-roman">IV</span>
+                            <span class="section-rule"></span>
+                            <span class="section-class">CABINET</span>
+                        </div>
                         <h2 class="section-title">
-                            A network of <em>subspecialists.</em>
+                            A cabinet of <em>subspecialists.</em>
                         </h2>
                         <p class="section-deck">
-                            Dermatology is not one discipline. The network reflects that.
-                            Cases route to the physician whose practice answers the
+                            Five disciplines orbit a single point of routing.
+                            Cases find the physician whose practice answers the
                             question.
                         </p>
                     </header>
 
-                    <ul class="network-list">
-                        <li class="network-row">
-                            <span class="network-letter">α</span>
-                            <div class="network-body">
-                                <h3>Medical Dermatology</h3>
-                                <p>
-                                    Acne, eczema, psoriasis, autoimmune disease, drug
-                                    eruptions, hair and nail disease.
-                                </p>
-                            </div>
-                            <span class="network-count">142 reviewers</span>
-                        </li>
-                        <li class="network-row">
-                            <span class="network-letter">β</span>
-                            <div class="network-body">
-                                <h3>Surgical Dermatology</h3>
-                                <p>
-                                    Skin cancer evaluation, biopsy planning, Mohs
-                                    candidacy, excisional and reconstructive guidance.
-                                </p>
-                            </div>
-                            <span class="network-count">38 reviewers</span>
-                        </li>
-                        <li class="network-row">
-                            <span class="network-letter">γ</span>
-                            <div class="network-body">
-                                <h3>Pediatric Dermatology</h3>
-                                <p>
-                                    Vascular lesions, atopic disease, genodermatoses,
-                                    neonatal presentations, adolescent acne.
-                                </p>
-                            </div>
-                            <span class="network-count">24 reviewers</span>
-                        </li>
-                        <li class="network-row">
-                            <span class="network-letter">δ</span>
-                            <div class="network-body">
-                                <h3>Dermatopathology</h3>
-                                <p>
-                                    Histopathology second-read, ambiguous biopsies,
-                                    melanocytic lesion review, immunofluorescence
-                                    interpretation.
-                                </p>
-                            </div>
-                            <span class="network-count">17 reviewers</span>
-                        </li>
-                        <li class="network-row">
-                            <span class="network-letter">ε</span>
-                            <div class="network-body">
-                                <h3>Cosmetic &amp; Aesthetic</h3>
-                                <p>
-                                    Pigmentary disorders, scarring, post-procedural
-                                    complications, aesthetic medicine adverse events.
-                                </p>
-                            </div>
-                            <span class="network-count">29 reviewers</span>
-                        </li>
-                    </ul>
+                    <!-- Cabinet header strip — replaces orbital dial -->
+                    <div class="cabinet-header">
+                        <div class="cabinet-figures">
+                            <span class="cabinet-figure-num">250</span>
+                            <span class="cabinet-figure-label">Reviewers, on call</span>
+                        </div>
+                        <span class="cabinet-rule"></span>
+                        <div class="cabinet-figures">
+                            <span class="cabinet-figure-num">5</span>
+                            <span class="cabinet-figure-label">Subspecialties covered</span>
+                        </div>
+                        <span class="cabinet-rule"></span>
+                        <div class="cabinet-figures">
+                            <span class="cabinet-figure-num">FAAD</span>
+                            <span class="cabinet-figure-label">All board-certified</span>
+                        </div>
+                    </div>
+
+                    <ol class="cabinet-list">
+                            <li class="cabinet-row">
+                                <span class="cabinet-letter">α</span>
+                                <div class="cabinet-body">
+                                    <h3>Medical Dermatology</h3>
+                                    <p>
+                                        Acne, eczema, psoriasis, autoimmune disease,
+                                        drug eruptions, hair and nail disease.
+                                    </p>
+                                </div>
+                                <span class="cabinet-count">142</span>
+                            </li>
+                            <li class="cabinet-row">
+                                <span class="cabinet-letter">β</span>
+                                <div class="cabinet-body">
+                                    <h3>Surgical Dermatology</h3>
+                                    <p>
+                                        Skin cancer evaluation, biopsy planning, Mohs
+                                        candidacy, excisional and reconstructive
+                                        guidance.
+                                    </p>
+                                </div>
+                                <span class="cabinet-count">38</span>
+                            </li>
+                            <li class="cabinet-row">
+                                <span class="cabinet-letter">γ</span>
+                                <div class="cabinet-body">
+                                    <h3>Pediatric Dermatology</h3>
+                                    <p>
+                                        Vascular lesions, atopic disease,
+                                        genodermatoses, neonatal presentations,
+                                        adolescent acne.
+                                    </p>
+                                </div>
+                                <span class="cabinet-count">24</span>
+                            </li>
+                            <li class="cabinet-row">
+                                <span class="cabinet-letter">δ</span>
+                                <div class="cabinet-body">
+                                    <h3>Dermatopathology</h3>
+                                    <p>
+                                        Histopathology second-read, ambiguous biopsies,
+                                        melanocytic lesion review, immunofluorescence
+                                        interpretation.
+                                    </p>
+                                </div>
+                                <span class="cabinet-count">17</span>
+                            </li>
+                            <li class="cabinet-row">
+                                <span class="cabinet-letter">ε</span>
+                                <div class="cabinet-body">
+                                    <h3>Cosmetic &amp; Aesthetic</h3>
+                                    <p>
+                                        Pigmentary disorders, scarring, post-procedural
+                                        complications, aesthetic medicine adverse
+                                        events.
+                                    </p>
+                                </div>
+                                <span class="cabinet-count">29</span>
+                            </li>
+                    </ol>
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- QUOTE — foil-stamped seal on midnight band         -->
+            <!-- ================================================== -->
             <section class="quote">
                 <div class="quote-inner">
-                    <span class="quote-eyebrow">A physician on the network</span>
+                    <svg class="quote-seal" viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="0.6" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.6" />
+                        <text x="50" y="22" text-anchor="middle" font-family="JetBrains Mono" font-size="6" letter-spacing="3" fill="currentColor">CERTIFIÉ</text>
+                        <text x="50" y="58" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="32" fill="currentColor">D</text>
+                        <text x="50" y="84" text-anchor="middle" font-family="JetBrains Mono" font-size="6" letter-spacing="3" fill="currentColor">RÉSEAU</text>
+                        <line x1="14" y1="50" x2="22" y2="50" stroke="currentColor" stroke-width="0.4" />
+                        <line x1="78" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="0.4" />
+                    </svg>
+
+                    <span class="quote-eyebrow">Témoignage · A physician on the network</span>
                     <blockquote>
                         <p>
                             <span class="quote-mark">“</span>I used to send three patients
@@ -473,90 +675,139 @@
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- PRICING — three reference plates                   -->
+            <!-- ================================================== -->
             <section id="pricing" class="pricing">
                 <div class="pricing-inner">
                     <header class="section-head">
-                        <span class="section-num">V.</span>
-                        <h2 class="section-title">
-                            Membership.
-                        </h2>
+                        <div class="section-prefix">
+                            <span class="section-roman">V</span>
+                            <span class="section-rule"></span>
+                            <span class="section-class">RÉFÉRENCE</span>
+                        </div>
+                        <h2 class="section-title">Membership.</h2>
                         <p class="section-deck">
-                            Three ways to bring the specialist network into your practice.
+                            Three references. Each engraved for a different scale of
+                            practice.
                         </p>
                     </header>
 
                     <div class="pricing-grid">
-                        <article class="tier">
-                            <header class="tier-head">
-                                <span class="tier-label">Per Case</span>
-                                <h3 class="tier-name">Pay-as-needed</h3>
+                        <article class="ref">
+                            <header class="ref-head">
+                                <span class="ref-id">RÉF. 01</span>
+                                <span class="ref-rule"></span>
+                                <span class="ref-class">Per Case</span>
                             </header>
-                            <div class="tier-price">
+                            <h3 class="ref-name">Pay-as-needed</h3>
+                            <div class="ref-price">
                                 <span class="price-amount">$95</span>
                                 <span class="price-unit">per consult</span>
                             </div>
-                            <p class="tier-desc">
-                                For practices testing the model. Submit a case, receive an
-                                assessment, billed individually.
+                            <p class="ref-desc">
+                                For practices testing the model. Submit a case,
+                                receive an assessment, billed individually.
                             </p>
-                            <ul class="tier-list">
-                                <li>Single-case submission</li>
-                                <li>Standard 24-hour turnaround</li>
-                                <li>Audit-trailed reports</li>
-                                <li>HIPAA-compliant intake</li>
-                            </ul>
-                            <a href="#request" class="tier-cta">
+                            <dl class="ref-spec">
+                                <div>
+                                    <dt>Submission</dt>
+                                    <dd>Single case</dd>
+                                </div>
+                                <div>
+                                    <dt>Turnaround</dt>
+                                    <dd>24-hour</dd>
+                                </div>
+                                <div>
+                                    <dt>Audit trail</dt>
+                                    <dd>Included</dd>
+                                </div>
+                                <div>
+                                    <dt>Intake</dt>
+                                    <dd>HIPAA</dd>
+                                </div>
+                            </dl>
+                            <a href="#request" class="ref-cta">
                                 <span>Begin per-case</span>
                                 <span class="btn-arrow">→</span>
                             </a>
                         </article>
 
-                        <article class="tier tier-featured">
-                            <span class="tier-flag">Most subscribed</span>
-                            <header class="tier-head">
-                                <span class="tier-label">Practice Retainer</span>
-                                <h3 class="tier-name">Concierge</h3>
+                        <article class="ref ref-featured">
+                            <span class="ref-flag">Most subscribed</span>
+                            <header class="ref-head">
+                                <span class="ref-id">RÉF. 02</span>
+                                <span class="ref-rule"></span>
+                                <span class="ref-class">Practice Retainer</span>
                             </header>
-                            <div class="tier-price">
+                            <h3 class="ref-name">Concierge</h3>
+                            <div class="ref-price">
                                 <span class="price-amount">$1,200</span>
                                 <span class="price-unit">per month</span>
                             </div>
-                            <p class="tier-desc">
+                            <p class="ref-desc">
                                 For solo and small concierge practices. Up to twenty
                                 consults monthly with priority routing.
                             </p>
-                            <ul class="tier-list">
-                                <li>20 consults / month included</li>
-                                <li>Priority routing · 12-hour median</li>
-                                <li>Direct-message a reviewing dermatologist</li>
-                                <li>Quarterly clinical-pattern report</li>
-                            </ul>
-                            <a href="#request" class="tier-cta tier-cta-solid">
+                            <dl class="ref-spec">
+                                <div>
+                                    <dt>Volume</dt>
+                                    <dd>20 / mo</dd>
+                                </div>
+                                <div>
+                                    <dt>Turnaround</dt>
+                                    <dd>12-hour</dd>
+                                </div>
+                                <div>
+                                    <dt>Direct line</dt>
+                                    <dd>Reviewer DM</dd>
+                                </div>
+                                <div>
+                                    <dt>Reporting</dt>
+                                    <dd>Quarterly</dd>
+                                </div>
+                            </dl>
+                            <a href="#request" class="ref-cta ref-cta-solid">
                                 <span>Request membership</span>
                                 <span class="btn-arrow">→</span>
                             </a>
                         </article>
 
-                        <article class="tier">
-                            <header class="tier-head">
-                                <span class="tier-label">Practice Group</span>
-                                <h3 class="tier-name">Enterprise</h3>
+                        <article class="ref">
+                            <header class="ref-head">
+                                <span class="ref-id">RÉF. 03</span>
+                                <span class="ref-rule"></span>
+                                <span class="ref-class">Practice Group</span>
                             </header>
-                            <div class="tier-price">
+                            <h3 class="ref-name">Enterprise</h3>
+                            <div class="ref-price">
                                 <span class="price-amount">Custom</span>
                                 <span class="price-unit">multi-physician</span>
                             </div>
-                            <p class="tier-desc">
-                                For concierge groups, executive medicine, and physician
-                                networks. Volume pricing and EHR integration.
+                            <p class="ref-desc">
+                                For concierge groups, executive medicine, and
+                                physician networks. Volume pricing and EHR
+                                integration.
                             </p>
-                            <ul class="tier-list">
-                                <li>Unlimited consults across the group</li>
-                                <li>Athena, Elation, or custom EHR integration</li>
-                                <li>Named clinical liaison · monthly review</li>
-                                <li>Outcomes reporting for medical directors</li>
-                            </ul>
-                            <a href="#request" class="tier-cta">
+                            <dl class="ref-spec">
+                                <div>
+                                    <dt>Volume</dt>
+                                    <dd>Unlimited</dd>
+                                </div>
+                                <div>
+                                    <dt>EHR</dt>
+                                    <dd>Athena · Elation</dd>
+                                </div>
+                                <div>
+                                    <dt>Liaison</dt>
+                                    <dd>Named</dd>
+                                </div>
+                                <div>
+                                    <dt>Outcomes</dt>
+                                    <dd>Dashboards</dd>
+                                </div>
+                            </dl>
+                            <a href="#request" class="ref-cta">
                                 <span>Speak with us</span>
                                 <span class="btn-arrow">→</span>
                             </a>
@@ -565,16 +816,23 @@
                 </div>
             </section>
 
+            <!-- ================================================== -->
+            <!-- REQUEST — engraved request panel                   -->
+            <!-- ================================================== -->
             <section id="request" class="request">
                 <div class="request-inner">
-                    <span class="request-eyebrow">Request access</span>
+                    <div class="request-prefix">
+                        <span class="section-roman">VI</span>
+                        <span class="section-rule"></span>
+                        <span class="section-class">DEMANDE</span>
+                    </div>
                     <h2 class="request-title">
                         For physicians who don't have time to <em>wait six weeks.</em>
                     </h2>
                     <p class="request-deck">
-                        The specialist network is closed to non-physicians. We verify NPI
-                        and board status before activating accounts. You'll hear back
-                        within one business day.
+                        The specialist network is closed to non-physicians. We
+                        verify NPI and board status before activating accounts.
+                        You'll hear back within one business day.
                     </p>
                     <form class="request-form" onsubmit="event.preventDefault();">
                         <label class="request-label" for="email">Practice email</label>
@@ -592,9 +850,9 @@
                             </button>
                         </div>
                         <p class="request-fine">
-                            By submitting you confirm you are a licensed physician seeking
-                            peer consultation. Personal patient identifiers are never
-                            transmitted at signup.
+                            By submitting you confirm you are a licensed physician
+                            seeking peer consultation. Personal patient identifiers
+                            are never transmitted at signup.
                         </p>
                     </form>
                 </div>
@@ -606,10 +864,16 @@
                 <div class="footer-mark">
                     <a href="#" class="logo">
                         <span class="logo-mark" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8" />
-                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="0.5" opacity="0.6" />
-                                <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                            <svg viewBox="0 0 32 32" fill="none">
+                                <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.6" />
+                                <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="0.4" opacity="0.5" />
+                                <g stroke="currentColor" stroke-width="0.6">
+                                    <line x1="16" y1="1" x2="16" y2="3.5" />
+                                    <line x1="31" y1="16" x2="28.5" y2="16" />
+                                    <line x1="16" y1="31" x2="16" y2="28.5" />
+                                    <line x1="1" y1="16" x2="3.5" y2="16" />
+                                </g>
+                                <circle cx="16" cy="16" r="2" fill="currentColor" />
                             </svg>
                         </span>
                         <span class="logo-text">
@@ -617,13 +881,13 @@
                         </span>
                     </a>
                     <p class="footer-line">
-                        A specialist network for concierge medicine.<br />
+                        A specialist cabinet for concierge medicine.<br />
                         Built by physicians. Reviewed by physicians.
                     </p>
                 </div>
                 <div class="footer-cols">
                     <div class="footer-col">
-                        <h4>Network</h4>
+                        <h4>Cabinet</h4>
                         <a href="#how">Method</a>
                         <a href="#network">Subspecialties</a>
                         <a href="#pricing">Membership</a>
@@ -646,7 +910,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 Dermlink, Inc.</span>
+                <span>© MMXXVI · Dermlink, Inc.</span>
                 <span class="footer-aside">
                     <em>Sapere aude</em> — dare to know.
                 </span>
